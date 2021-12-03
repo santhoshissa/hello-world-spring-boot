@@ -12,6 +12,13 @@ pipeline {
                 echo 'Build and Package'
                 bat 'mvn clean'
                 bat 'mvn install'
+                //bat 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=34b5eb060faf6646063dc8fe6edc8d2bc5fa1363'
+            }
+        }
+         stage('Code Quality with Sonar') {
+            steps {
+                echo 'Code Quality'
+                bat 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=34b5eb060faf6646063dc8fe6edc8d2bc5fa1363'
             }
         }
        stage('Deploy') {
