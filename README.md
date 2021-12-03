@@ -2,4 +2,3 @@
 
 A Hello World Spring Boot app.
 
-1
