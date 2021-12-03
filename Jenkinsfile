@@ -7,10 +7,11 @@ pipeline {
               git 'https://github.com/santhoshissa/hello-world-spring-boot.git'
             }
         }
-       stage('Build') {
+       stage('Build and Package') {
             steps {
                 echo 'Build and Package'
                 bat 'mvn clean'
+                bat 'mvn install'
             }
         }
        stage('Deploy') {
