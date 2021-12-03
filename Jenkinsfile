@@ -19,4 +19,9 @@ pipeline {
             }
         }
     }  
+    tools {
+        maven 'mvn'
+        jdk 'openjdk'
+        git 'git'
+    }
 }
