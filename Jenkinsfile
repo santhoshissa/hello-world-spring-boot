@@ -13,7 +13,7 @@ pipeline {
                 echo 'mvn actions'
                 bat 'mvn clean'
                 bat 'mvn install'
-                bat 'mvn sonar:sonar \ -Dsonar.host.url=http://localhost:9000 \  -Dsonar.login=42b7fe4ecd92c27e96b3a2529d42c68f36144f9d'
+                bat 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000  -Dsonar.login=42b7fe4ecd92c27e96b3a2529d42c68f36144f9d'
             }
         }
       
