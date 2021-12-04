@@ -20,6 +20,8 @@ pipeline {
        stage('deploy') {
             steps {
                 echo 'deploy'
+                bat 'cd'
+                //bat 'copy "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps"'
             }
         }
        
