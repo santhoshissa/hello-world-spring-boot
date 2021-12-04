@@ -16,10 +16,16 @@ pipeline {
                 bat 'mvn sonar:sonar \ -Dsonar.host.url=http://localhost:9000 \  -Dsonar.login=42b7fe4ecd92c27e96b3a2529d42c68f36144f9d'
             }
         }
+      
        stage('deploy') {
             steps {
                 echo 'deploy'
             }
+        }
+          tools {
+            jdk 'jdk'
+            git 'git'
+            maven 'mvn'
         }
     }
 }
