@@ -22,11 +22,12 @@ pipeline {
                 echo 'deploy'
             }
         }
-          tools {
+       
+    }
+       tools {
             jdk 'jdk'
             git 'git'
             maven 'mvn'
         }
-    }
 }
 // Script //
